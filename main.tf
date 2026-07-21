@@ -15,10 +15,10 @@ resource "docker_image" "nginx" {
 }
 
 resource "docker_container" "nginx" {
-  name  = "tutorial"
+  name  = "super-awesome-nginx"
   image = docker_image.nginx.image_id
   ports {
     internal = 80
-    external = 8000
+    external = 8080
   }
 }
